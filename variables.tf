@@ -6,8 +6,8 @@ variable "instance_name" {
 
 variable "instance_type" {}
 
-variable "subnet_id" {
-  description = "The VPC subnet the instance(s) will go in"
+variable "subnet_ids" {
+  description = "The VPC subnet(s) the instance(s) will go in"
 }
 
 variable "ami_id" {
@@ -20,7 +20,7 @@ variable "number_of_instances" {
 }
 
 variable "user_data" {
-  description = "The path to a file with user_data for the instances"
+  description = "The user_data for the instances"
 }
 
 variable "tags" {
@@ -29,7 +29,3 @@ variable "tags" {
  }
 }
 
-// Variables for providers used in this module
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-variable "aws_region" {}
