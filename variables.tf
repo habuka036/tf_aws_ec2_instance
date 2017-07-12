@@ -8,6 +8,7 @@ variable "instance_type" {}
 
 variable "subnet_ids" {
   description = "The VPC subnet(s) the instance(s) will go in"
+  default = []
 }
 
 variable "ami_id" {
