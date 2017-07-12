@@ -2,7 +2,9 @@
 resource "aws_instance" "ec2_instance" {
     ami = "${var.ami_id}"
     count = "${var.number_of_instances}"
-    subnet_id = "${element(var.subnet_ids, count.index)}"
+    #subnet_id = "${element(var.subnet_ids, count.index)}"
+    subnet_id = "${lookup(var.subnet_ids, count.index % 2)}"
+    security_groups = ["${var.security_groups}"]
     instance_type = "${var.instance_type}"
     user_data = "${var.user_data}"
     tags {

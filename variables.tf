@@ -11,6 +11,11 @@ variable "subnet_ids" {
   default = []
 }
 
+variable "security_groups" {
+  description = "Security Group(s)"
+  default = []
+}
+
 variable "ami_id" {
   description = "The AMI to use"
 }
