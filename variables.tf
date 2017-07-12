@@ -35,3 +35,6 @@ variable "tags" {
  }
 }
 
+variable "key_name" {
+  description = "Name of keypair"
+}
